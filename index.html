@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional AI Music Videos | Titanio Films</title>
-    <meta name="description" content="Professional music videos powered by AI. Real team, cinema quality. From $1,250. YouTube pays 2x more for videos.">
+    <title>Titanio - Take Your Music to the World | AI-Powered Music Videos</title>
+    <meta name="description" content="Professional music videos powered by AI. Real team, cinema quality, accessible pricing. From $1,250. YouTube pays 2x more for videos!">
     <style>
         * {
             margin: 0;
@@ -20,175 +20,271 @@
         }
         
         .hero {
-            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
-            color: #fff;
-            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+            padding: 60px 20px 80px;
             text-align: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,0,0,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255,0,0,0.1) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
         }
         
         .logo {
-            max-width: 300px;
-            margin: 0 auto 40px;
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto 30px;
+            display: block;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
         }
         
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        
-        .highlight {
-            color: #ff3333;
-        }
-        
-        .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        
-        .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 30px 0;
-            color: #ff3333;
-        }
-        
-        .price-note {
-            font-size: 1rem;
-            opacity: 0.7;
-            margin-bottom: 40px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #ff3333;
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: 900;
             color: #fff;
-            padding: 20px 50px;
-            font-size: 1.3rem;
-            text-decoration: none;
-            border-radius: 50px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 30px rgba(255,0,0,0.5);
+        }
+        
+        .hero .tagline {
+            font-size: 2em;
+            color: #ff3333;
             font-weight: 700;
-            transition: all 0.3s;
-            margin: 20px 10px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(255,51,51,0.5);
         }
         
-        .cta-button:hover {
-            background: #cc0000;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 51, 51, 0.3);
+        .hero .subtitle {
+            font-size: 1.3em;
+            color: #ccc;
+            margin-bottom: 40px;
+            font-weight: 300;
         }
         
-        .cta-secondary {
-            background: transparent;
+        .price-box {
+            background: rgba(255,51,51,0.1);
             border: 2px solid #ff3333;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 600px;
+            backdrop-filter: blur(10px);
         }
         
-        .cta-secondary:hover {
-            background: #ff3333;
+        .price-box .price {
+            font-size: 3em;
+            color: #ff3333;
+            font-weight: 900;
+            margin-bottom: 10px;
         }
         
-        .section {
+        .price-box .comparison {
+            color: #999;
+            font-size: 0.9em;
+            text-decoration: line-through;
+        }
+        
+        .price-box .note {
+            color: #ccc;
+            font-size: 0.85em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            padding: 18px 40px;
+            font-size: 1.2em;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ff3333 0%, #cc0000 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(255,51,51,0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,51,51,0.6);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-3px);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0 20px;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+        
+        .social-link:hover {
+            background: rgba(255,51,51,0.2);
+            border-color: #ff3333;
+            transform: translateY(-2px);
+        }
+        
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+        
+        .features {
+            background: #111;
             padding: 80px 20px;
+        }
+        
+        .container {
             max-width: 1200px;
             margin: 0 auto;
         }
         
-        .section-white {
-            background: #fff;
-            color: #333;
-        }
-        
-        .section-dark {
-            background: #1a1a1a;
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
             color: #fff;
+            margin-bottom: 20px;
+            font-weight: 900;
         }
         
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
+        .section-subtitle {
             text-align: center;
+            color: #999;
+            margin-bottom: 60px;
+            font-size: 1.2em;
         }
         
-        .benefits {
+        .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
-            margin-top: 60px;
+            margin-bottom: 60px;
         }
         
-        .benefit {
+        .feature-card {
+            background: rgba(255,255,255,0.03);
+            padding: 40px 30px;
+            border-radius: 20px;
             text-align: center;
-            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
         }
         
-        .benefit-icon {
-            font-size: 3rem;
+        .feature-card:hover {
+            background: rgba(255,51,51,0.05);
+            border-color: #ff3333;
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3em;
             margin-bottom: 20px;
         }
         
-        .benefit h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 60px;
-        }
-        
-        .comparison-item {
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        
-        .traditional {
-            background: #f5f5f5;
-            opacity: 0.7;
-        }
-        
-        .titanio {
-            background: linear-gradient(135deg, #ff3333 0%, #cc0000 100%);
+        .feature-card h3 {
             color: #fff;
-            transform: scale(1.05);
-        }
-        
-        .comparison-price {
-            font-size: 3rem;
+            font-size: 1.4em;
+            margin-bottom: 15px;
             font-weight: 700;
-            margin: 20px 0;
         }
         
-        .videos {
+        .feature-card p {
+            color: #999;
+            line-height: 1.8;
+        }
+        
+        .examples {
+            background: #000;
+            padding: 80px 20px;
+        }
+        
+        .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
             margin-top: 60px;
         }
         
         .video-card {
-            background: #fff;
-            border-radius: 10px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
         }
         
-        .video-embed {
+        .video-card:hover {
+            border-color: #ff3333;
+            transform: translateY(-5px);
+        }
+        
+        .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
         }
         
-        .video-embed iframe {
+        .video-wrapper iframe {
             position: absolute;
             top: 0;
             left: 0;
@@ -197,236 +293,306 @@
         }
         
         .video-info {
-            padding: 20px;
-            color: #333;
+            padding: 25px;
+        }
+        
+        .video-info h3 {
+            color: #fff;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .video-info p {
+            color: #999;
+            font-size: 0.95em;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+            padding: 80px 20px;
         }
         
         .contact-form {
             max-width: 600px;
             margin: 60px auto 0;
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.03);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
         }
         
         .form-group {
             margin-bottom: 25px;
         }
         
-        label {
+        .form-group label {
             display: block;
-            margin-bottom: 8px;
+            color: #fff;
+            margin-bottom: 10px;
             font-weight: 600;
-            color: #333;
+            font-size: 0.95em;
         }
         
-        input, textarea {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            font-size: 1em;
             font-family: inherit;
+            transition: all 0.3s ease;
         }
         
-        input:focus, textarea:focus {
+        .form-group input:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: #ff3333;
+            background: rgba(0,0,0,0.7);
         }
         
-        textarea {
-            min-height: 120px;
+        .form-group textarea {
             resize: vertical;
+            min-height: 150px;
         }
         
-        .submit-button {
-            width: 100%;
-            background: #ff3333;
-            color: #fff;
-            padding: 18px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
+        .contact-info {
+            text-align: center;
+            margin-top: 40px;
+            color: #999;
         }
         
-        .submit-button:hover {
-            background: #cc0000;
+        .contact-info a {
+            color: #ff3333;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
         }
         
         footer {
             background: #000;
-            color: #fff;
-            text-align: center;
             padding: 40px 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        footer p {
+            margin-bottom: 10px;
         }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
+            .hero h1 {
+                font-size: 2.2em;
             }
             
-            .subtitle {
-                font-size: 1.2rem;
+            .hero .tagline {
+                font-size: 1.5em;
             }
             
-            .price {
-                font-size: 2rem;
+            .hero .subtitle {
+                font-size: 1.1em;
             }
             
-            .comparison {
+            .price-box .price {
+                font-size: 2.2em;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .video-grid {
                 grid-template-columns: 1fr;
             }
             
-            .titanio {
-                transform: scale(1);
+            .contact-form {
+                padding: 30px 20px;
+            }
+            
+            .social-links {
+                gap: 15px;
+            }
+            
+            .social-link {
+                font-size: 0.85em;
+                padding: 10px 18px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero">
-        <img src="logo.png" alt="Titanio Films" class="logo">
-        <h1>Professional Music Videos<br><span class="highlight">Powered by AI</span></h1>
-        <p class="subtitle">Real team. Cinema quality. Accessible pricing.</p>
-        <div class="price">From $1,250</div>
-        <p class="price-note">*Price varies with complexity</p>
-        <div>
-            <a href="#contact" class="cta-button">Get Your Quote</a>
-            <a href="#portfolio" class="cta-button cta-secondary">See Examples</a>
-        </div>
-    </div>
-
-    <!-- Why YouTube Section -->
-    <div class="section section-white">
-        <h2>Why You Need a Music Video</h2>
-        <div class="benefits">
-            <div class="benefit">
-                <div class="benefit-icon">💰</div>
-                <h3>YouTube Pays 2x More</h3>
-                <p>Music videos generate significantly more revenue than audio-only content on YouTube</p>
+    <section class="hero">
+        <div class="hero-content">
+            <img src="TITANIO_LOGO_ALPHA_02.png" alt="Titanio Productions" class="logo">
+            <h1>Take Your Music to the World</h1>
+            <p class="tagline">🎬 Professional Music Videos Powered by AI</p>
+            <p class="subtitle">Real team. Cinema quality. Accessible pricing.<br>YouTube pays 2x more for videos!</p>
+            
+            <div class="price-box">
+                <div class="price">From $1,250</div>
+                <div class="comparison">Traditional: $5,000 - $50,000</div>
+                <div class="note">*Price varies with complexity</div>
             </div>
-            <div class="benefit">
-                <div class="benefit-icon">📈</div>
-                <h3>Grow Your Audience</h3>
-                <p>Videos get 10x more engagement and shares than audio tracks alone</p>
+            
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Get Your Quote</a>
+                <a href="#examples" class="btn btn-secondary">See Examples</a>
             </div>
-            <div class="benefit">
-                <div class="benefit-icon">🎬</div>
-                <h3>Professional Image</h3>
-                <p>Stand out from the competition with cinema-quality visuals</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Comparison Section -->
-    <div class="section section-dark">
-        <h2>Traditional vs Titanio</h2>
-        <div class="comparison">
-            <div class="comparison-item traditional">
-                <h3>Traditional Production</h3>
-                <div class="comparison-price">$5,000 - $50,000</div>
-                <ul style="text-align: left; margin-top: 20px; line-height: 2;">
-                    <li>Expensive crew & equipment</li>
-                    <li>Location fees</li>
-                    <li>Weeks or months to deliver</li>
-                    <li>Limited revisions</li>
-                </ul>
-            </div>
-            <div class="comparison-item titanio">
-                <h3>Titanio AI-Powered</h3>
-                <div class="comparison-price">$1,250 - $3,000</div>
-                <ul style="text-align: left; margin-top: 20px; line-height: 2;">
-                    <li>✅ Professional team</li>
-                    <li>✅ Custom storyboard</li>
-                    <li>✅ Cinema-quality editing</li>
-                    <li>✅ AI-generated visuals</li>
-                    <li>✅ Fast turnaround</li>
-                </ul>
+            
+            <div class="social-links">
+                <a href="https://www.youtube.com/@titanio_ia" target="_blank" rel="noopener" class="social-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                    YouTube
+                </a>
+                <a href="https://www.instagram.com/titaniofilms/?hl=en" target="_blank" rel="noopener" class="social-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                    Instagram
+                </a>
+                <a href="https://www.imdb.com/pt/search/title/?companies=co0366995" target="_blank" rel="noopener" class="social-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.3 0H1.7C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.7 1.7h20.6c.9 0 1.7-.8 1.7-1.7V1.7c0-.9-.8-1.7-1.7-1.7zM4.5 5.3h1.5v13.4H4.5V5.3zm4.8 0h1.8l1.1 6.6 1.1-6.6H15v13.4h-1.5v-9.8l-1.3 7.3h-1.2l-1.3-7.3v9.8H8.3V5.3zm8.7 0h3.8v1.5h-2.3v3.8h2.1v1.5h-2.1v5.1h2.3v1.5H18V5.3z"/>
+                    </svg>
+                    IMDb
+                </a>
+                <a href="https://www.titanioproducoes.com.br/about-1" target="_blank" rel="noopener" class="social-link">
+                    <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    Website
+                </a>
             </div>
         </div>
-    </div>
-
-    <!-- Portfolio Section -->
-    <div class="section section-white" id="portfolio">
-        <h2>Our Work</h2>
-        <div class="videos">
-            <div class="video-card">
-                <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/5Pj0kZxSxko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Titanio?</h2>
+            <p class="section-subtitle">Professional quality meets accessible pricing</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Custom Storyboard</h3>
+                    <p>Every frame is carefully designed by our creative team to match your music's vision and emotion.</p>
                 </div>
-                <div class="video-info">
-                    <h3>Melvin's Nightmare</h3>
-                    <p>"No One Can Trust Me Tonight"</p>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Visuals</h3>
+                    <p>Stunning images generated with cutting-edge AI technology, edited and refined by professionals.</p>
                 </div>
-            </div>
-            <div class="video-card">
-                <div class="video-embed">
-                    <iframe src="https://www.youtube.com/embed/j-BFmkELcsg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>Professional Editing</h3>
+                    <p>Cinema-quality editing, color grading, and post-production by experienced filmmakers.</p>
                 </div>
-                <div class="video-info">
-                    <h3>MARIA FLOR</h3>
-                    <p>"Andarilha"</p>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Accessible Pricing</h3>
+                    <p>$1,250-$3,000 vs traditional $5K-$50K. Get professional quality without breaking the bank.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Boost Your Revenue</h3>
+                    <p>YouTube pays significantly more for music videos. Increase your streaming income exponentially.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Get your professional music video ready in weeks, not months. Perfect for release schedules.</p>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="section section-dark" id="contact">
-        <h2>Get Your Music Video</h2>
-        <div class="contact-form">
-            <form action="https://formspree.io/f/xdkobpqv" method="POST">
+    </section>
+    
+    <section id="examples" class="examples">
+        <div class="container">
+            <h2 class="section-title">Our Work</h2>
+            <p class="section-subtitle">See what we've created for independent artists</p>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/5Pj0kZxSxko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Melvin's Nightmare</h3>
+                        <p>Surreal AI-generated visuals perfectly matching the dark, atmospheric tone of the track.</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/j-BFmkELcsg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Andarilha</h3>
+                        <p>Cinematic storytelling with AI-powered imagery, bringing the song's narrative to life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ready to Take Your Music Global?</h2>
+            <p class="section-subtitle">Get your personalized quote today</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/xgvewqwn" method="POST">
                 <div class="form-group">
                     <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="email">Email *</label>
                     <input type="email" id="email" name="email" required>
                 </div>
+                
                 <div class="form-group">
-                    <label for="artist">Artist/Band Name *</label>
-                    <input type="text" id="artist" name="artist" required>
+                    <label for="music">Link to Your Music (Spotify, YouTube, SoundCloud)</label>
+                    <input type="url" id="music" name="music">
                 </div>
+                
                 <div class="form-group">
-                    <label for="song">Song Title</label>
-                    <input type="text" id="song" name="song">
+                    <label for="message">Tell Us About Your Project *</label>
+                    <textarea id="message" name="message" required placeholder="Describe your vision, style, budget, and timeline..."></textarea>
                 </div>
-                <div class="form-group">
-                    <label for="message">Tell us about your project *</label>
-                    <textarea id="message" name="message" required placeholder="Describe your vision, style references, timeline, etc."></textarea>
-                </div>
-                <button type="submit" class="submit-button">Get Your Free Quote</button>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Get Your Quote</button>
             </form>
-            <p style="text-align: center; margin-top: 20px; color: #666;">
-                Or email us directly: <a href="mailto:contact@titaniofilms.com" style="color: #ff3333; text-decoration: none; font-weight: 600;">contact@titaniofilms.com</a>
-            </p>
+            
+            <div class="contact-info">
+                <p>Or email us directly at <a href="mailto:contact@titaniofilms.com">contact@titaniofilms.com</a></p>
+                <p style="margin-top: 20px; font-size: 0.9em;">TITANIO PRODUCTIONS, LLC<br>500 NW 2nd Ave #13655, Miami, FL 33101, USA</p>
+            </div>
         </div>
-    </div>
-
-    <!-- Footer -->
+    </section>
+    
     <footer>
-        <p>&copy; 2025 Titanio Films. All rights reserved.</p>
-        <p style="margin-top: 10px; opacity: 0.7;">Professional music video production powered by AI</p>
+        <p>&copy; 2025 Titanio Productions, LLC. All rights reserved.</p>
+        <p>EIN: 84-4047588 | Registered in Florida, USA</p>
     </footer>
-
-    <!-- Simple Analytics -->
-    <script>
-        // Track form submissions
-        document.querySelector('form').addEventListener('submit', function() {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'form_submit', {
-                    'event_category': 'Contact',
-                    'event_label': 'Quote Request'
-                });
-            }
-        });
-    </script>
 </body>
 </html>
-
