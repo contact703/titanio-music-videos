@@ -1,0 +1,9 @@
+{
+  "name": "titanio-music-videos",
+  "version": "1.0.0",
+  "description": "Professional AI Music Videos Landing Page",
+  "scripts": {
+    "start": "python3 -m http.server 8000"
+  }
+}
+
