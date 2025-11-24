@@ -116,6 +116,69 @@
             flex-wrap: wrap;
             margin-top: 30px;
         }
+
+        .cta-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dropdown-caret {
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 5px;
+            transform: rotate(45deg);
+            transition: transform 0.2s ease;
+        }
+
+        .cta-dropdown.open .dropdown-caret {
+            transform: rotate(-135deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid rgba(255,51,51,0.6);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.25s ease;
+            z-index: 5;
+            min-width: 260px;
+        }
+
+        .cta-dropdown.open .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 16px 20px;
+            color: #fff;
+            text-decoration: none;
+            background: transparent;
+            transition: background 0.2s ease, padding-left 0.2s ease;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(255,51,51,0.1);
+            padding-left: 26px;
+        }
         
         .btn {
             padding: 18px 40px;
@@ -236,8 +299,19 @@
         }
         
         .feature-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
+            margin: 0 auto 20px;
+            width: 70px;
+            height: 70px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #ff4d4d 0%, #cc0000 100%);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 12px 30px rgba(255,51,51,0.25);
         }
         
         .feature-card h3 {
@@ -437,7 +511,7 @@
         <div class="hero-content">
             <img src="TITANIO_LOGO_ALPHA_02.png" alt="Titanio Productions" class="logo">
             <h1>Take Your Music to the World</h1>
-            <p class="tagline">🎬 Professional Music Videos Powered by AI</p>
+            <p class="tagline">Professional Music Videos Powered by AI</p>
             <p class="subtitle">Real team. Cinema quality. Accessible pricing.<br>YouTube pays 2x more for videos!</p>
             
             <div class="price-box">
@@ -447,7 +521,17 @@
             </div>
             
             <div class="cta-buttons">
-                <a href="https://buy.stripe.com/6oUdR23cHc0Bb3S4chfAc00" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Choose Your Package</a>
+                <div class="cta-dropdown" id="packageDropdown">
+                    <button class="btn btn-primary dropdown-toggle" id="packageButton" aria-haspopup="true" aria-expanded="false">
+                        Choose Your Package
+                        <span class="dropdown-caret"></span>
+                    </button>
+                    <div class="dropdown-menu" id="packageMenu" role="menu">
+                        <a href="https://buy.stripe.com/6oUdR23cHc0Bb3S4chfAc00" target="_blank" rel="noopener noreferrer" role="menuitem">Basic Package</a>
+                        <a href="https://buy.stripe.com/28EeV6bJd6Ghc7W5glfAc01" target="_blank" rel="noopener noreferrer" role="menuitem">Standard Package</a>
+                        <a href="https://buy.stripe.com/3cIfZa9B5e8Jeg4105fAc02" target="_blank" rel="noopener noreferrer" role="menuitem">Premium Package</a>
+                    </div>
+                </div>
                 <a href="#contact" class="btn btn-secondary">Get a Quote</a>
             </div>
             
@@ -481,37 +565,37 @@
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
+                    <div class="feature-icon">Design</div>
                     <h3>Custom Storyboard</h3>
                     <p>Every frame is carefully designed by our creative team to match your music's vision and emotion.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
+                    <div class="feature-icon">AI</div>
                     <h3>AI-Powered Visuals</h3>
                     <p>Stunning images generated with cutting-edge AI technology, edited and refined by professionals.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">🎬</div>
+                    <div class="feature-icon">Edit</div>
                     <h3>Professional Editing</h3>
                     <p>Cinema-quality editing, color grading, and post-production by experienced filmmakers.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">💰</div>
+                    <div class="feature-icon">Value</div>
                     <h3>Accessible Pricing</h3>
                     <p>$1,250-$3,000 vs traditional $5K-$50K. Get professional quality without breaking the bank.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">📈</div>
+                    <div class="feature-icon">Growth</div>
                     <h3>Boost Your Revenue</h3>
                     <p>YouTube pays significantly more for music videos. Increase your streaming income exponentially.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
+                    <div class="feature-icon">Speed</div>
                     <h3>Fast Turnaround</h3>
                     <p>Get your professional music video ready in weeks, not months. Perfect for release schedules.</p>
                 </div>
@@ -588,5 +672,37 @@
         <p>&copy; 2025 Titanio Productions, LLC. All rights reserved.</p>
         <p>EIN: 84-4047588 | Registered in Florida, USA</p>
     </footer>
+
+    <script>
+        const packageDropdown = document.getElementById('packageDropdown');
+        const packageButton = document.getElementById('packageButton');
+
+        function closeDropdown() {
+            packageDropdown.classList.remove('open');
+            packageButton.setAttribute('aria-expanded', 'false');
+        }
+
+        packageButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            const isOpen = packageDropdown.classList.toggle('open');
+            packageButton.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!packageDropdown.contains(event.target)) {
+                closeDropdown();
+            }
+        });
+
+        packageDropdown.querySelectorAll('.dropdown-menu a').forEach((link) => {
+            link.addEventListener('click', () => closeDropdown());
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeDropdown();
+            }
+        });
+    </script>
 </body>
 </html>
